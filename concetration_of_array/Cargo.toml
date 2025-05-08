@@ -1,0 +1,9 @@
+[package]
+name = "concetration_of_array"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+[dev-dependencies]
+criterion = "0.5"
+
