@@ -1,0 +1,5 @@
+/home/robert/Dokumenty/NAUKA/LEETCODE/total_sharacters_in_string_after_transformations_1/target/debug/deps/libtotal_sharacters_in_string_after_transformations_1-b8460856d6aa9b81.rmeta: src/main.rs
+
+/home/robert/Dokumenty/NAUKA/LEETCODE/total_sharacters_in_string_after_transformations_1/target/debug/deps/total_sharacters_in_string_after_transformations_1-b8460856d6aa9b81.d: src/main.rs
+
+src/main.rs:

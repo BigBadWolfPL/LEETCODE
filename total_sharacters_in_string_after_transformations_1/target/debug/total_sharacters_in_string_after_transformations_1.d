@@ -1,0 +1,1 @@
+/home/robert/Dokumenty/NAUKA/LEETCODE/total_sharacters_in_string_after_transformations_1/target/debug/total_sharacters_in_string_after_transformations_1: /home/robert/Dokumenty/NAUKA/LEETCODE/total_sharacters_in_string_after_transformations_1/src/main.rs
