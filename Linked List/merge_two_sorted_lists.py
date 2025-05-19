@@ -31,15 +31,16 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
             current.next = list2
             list2 = list2.next
         current = current.next
+    
     current.next = list1 if list1 else list2
     return dummy.next
     
 
-test1 = ListNode.build([1,2,4])
+test1 = ListNode.build([1,2,4,8])
 test2 = ListNode.build([1,3,4,5,6,7])
 
 
-result = mergeTwoLists(test1, test2) # Output: [1,1,2,3,4,4]
+result = mergeTwoLists(test1, test2) # Output: [1,1,2,3,4,4,5,6,7]
 
 while result:
     print(result.val)
