@@ -19,19 +19,10 @@ class ListNode:
         return head
     
 
-test1 = ListNode.build_node([1,2,3,3,4,4,5])
-test2 = ListNode.build_node([1,1,1,2,3])
-test3 = ListNode.build_node([1,1,1,1,1])
-test4 = ListNode.build_node([1,2,3,4,5])
-test5 = ListNode.build_node([1,1,3,4,5])
-test6 = ListNode.build_node([1,2,3,4,4])
-test7 = ListNode.build_node([1,1,2,3,3,4,5,5,6])
-
-
-
 class Solution:
-    def deleteDuplicates(head: Optional[ListNode]):
-        result = []
+    @staticmethod
+    def deleteDuplicates(head: Optional[ListNode]) -> Optional[ListNode]:
+        unique = []
         counter = dict()
         prev = None
         current = None
@@ -43,20 +34,38 @@ class Solution:
             counter[prev] = counter.get(prev, 0) + 1
             if prev != current:
                 if counter.get(prev) == 1:
-                    result.append(prev)
-        return result
+                    unique.append(prev)
+        if not unique:
+            return None
+        new_head = ListNode(unique[0])
+        new_current = new_head
 
-            
-
-print(f"Case 1: {[1,2,5] == Solution.deleteDuplicates(test1)}")
-print(f"case 2: {[2,3]== Solution.deleteDuplicates(test2)}")
-print(f"Case 3: {[] == Solution.deleteDuplicates(test3)}")
-print(f"Case 4: {[1,2,3,4,5] == Solution.deleteDuplicates(test4)}")
-print(f"Case 5: {[3,4,5] == Solution.deleteDuplicates(test5)}")
-print(f"Case 6: {[1,2,3] == Solution.deleteDuplicates(test6)}")
-print(f"Case 7: {[2,4,6] == Solution.deleteDuplicates(test7)}")
+        for val in unique[1:]:
+            new_current.next = ListNode(val)
+            new_current = new_current.next
+        return new_head
 
 
-#while case_1:
-#    print(case_1.val)
-#    case_1 = case_1.next
+"""
+TESTS
+"""
+
+test1 = ListNode.build_node([1,2,3,3,4,4,5])
+test2 = ListNode.build_node([1,1,1,2,3])
+test3 = ListNode.build_node([1,1,1,1,1])
+test4 = ListNode.build_node([1,2,3,4,5])
+test5 = ListNode.build_node([1,1,3,4,5])
+test6 = ListNode.build_node([1,2,3,4,4])
+test7 = ListNode.build_node([1,1,2,3,3,4,5,5,6])
+
+tests = [test1, test2, test3, test4, test5, test6, test7]        
+
+
+for t in tests:
+    test_case = Solution.deleteDuplicates(t)
+    while test_case:
+        print(test_case.val)
+        test_case = test_case.next
+    print("----")
+
+
