@@ -34,7 +34,19 @@ class Solution:
             
 
 
+"""
+class Solution:
+    def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
+        new_head = ListNode(0, head)
+        current = new_head
 
+        while current.next:
+            if current.next.val == val:
+                current.next = current.next.next
+            else:
+                current = current.next
+        return new_head.next
+"""
 
 
 """
