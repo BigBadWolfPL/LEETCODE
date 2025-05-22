@@ -18,9 +18,14 @@ class ListNode:
             current = current.next
         return head
     
-node1 = ListNode.build_node([1,2,3,4,5])
+test_node_1 = ListNode.build_node([1,2,3,4,5])
 
 
-while node1:
-    print(node1.val)
-    node1 = node1.next
+def read_reverse(node: Optional[ListNode]) -> None:
+    if not node:
+        return
+    read_reverse(node.next)
+    print(node.val)
+
+
+read_reverse(test_node_1)
