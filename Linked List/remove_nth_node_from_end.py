@@ -25,6 +25,35 @@ test_node_1 = ListNode.build_node([1,2,3,4,5])
 
 class Solution:
     def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        while head:
+            first = head
+            if first:
+                for _ in range(n):
+                    previous = head.val if head else None
+                    head = head.next if head else None  
+                    
+                    f_val = head.next.val if head else None
+                    print(f"Second: {previous}, First: {f_val}")
+            head = head.next if head else None
+
+            
+            
+            #head = head.next
+
+s
+
+result_1 = Solution.removeNthFromEnd(test_node_1, 2)
+
+while result_1:
+    print(result_1.val)
+    result_1 = result_1.next
+
+
+'''
+TESTS
+
+class Solution:
+    def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
         result = []
         while head:
             result.append(head.val)
@@ -43,9 +72,6 @@ class Solution:
         return new_head
 
 
-'''
-TESTS
-'''
 
 class TestRemoveNthFromEnd(unittest.TestCase):
     def test_val_in_list(self):
@@ -68,6 +94,9 @@ class TestRemoveNthFromEnd(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+'''
+
 
 """
 
