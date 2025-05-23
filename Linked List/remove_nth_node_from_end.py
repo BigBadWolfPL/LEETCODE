@@ -30,17 +30,19 @@ class Solution:
             if first:
                 for _ in range(n):
                     previous = head.val if head else None
+                    print(f"dodać {previous}")
                     head = head.next if head else None  
-                    
-                    f_val = head.next.val if head else None
-                    print(f"Second: {previous}, First: {f_val}")
+                    f_val = head.val if head else None
+                    if f_val == None:
+                        break
+            print(f"Second: {previous}, First: {f_val}")
             head = head.next if head else None
 
             
             
             #head = head.next
 
-s
+
 
 result_1 = Solution.removeNthFromEnd(test_node_1, 2)
 
