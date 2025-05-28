@@ -10,15 +10,15 @@ fn main() {
 struct Solution {}
 
 impl Solution {
-    pub fn appeal_sum(s: String) -> i32 {
-        let mut characters: HashMap<char, i32> = HashMap::new();
-        let mut result = 0;
-        let mut current = 0;
+    pub fn appeal_sum(s: String) -> i64 {
+        let mut characters: HashMap<char, i64> = HashMap::new();
+        let mut result: i64 = 0;
+        let mut current: i64 = 0;
         for (idx, ch) in s.chars().enumerate() {
-            let prev_index = characters.get(&ch).unwrap_or(&-1);
-            current += idx as i32 - prev_index;
+            let prev_index = *characters.get(&ch).unwrap_or(&-1);
+            current += idx as i64 - prev_index;
             result += current;
-            characters.entry(ch).and_modify(|x| *x = idx as i32).or_insert(idx as i32);
+            characters.insert(ch, idx as i64);
         }
         result
     }
