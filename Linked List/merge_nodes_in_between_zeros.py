@@ -28,12 +28,13 @@ class Solution:
         head = head.next
 
         while head:
-            if head.val !=0:
+            nodes_sum = 0
+            while head.val != 0:
                 nodes_sum += head.val
-            else:
-                current.next = ListNode(nodes_sum)
-                current = current.next
-                nodes_sum = 0
+                head = head.next
+            current.next = ListNode(nodes_sum)
+            current = current.next
+
             head = head.next
         return dummy.next
 
