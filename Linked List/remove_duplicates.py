@@ -26,17 +26,24 @@ class Solution:
         prev = None
 
         while head:
-            if head.val == prev:
-                head = head.next
-                continue
-            else:
+            if head.val != prev:
                 prev = head.val
                 current.next = ListNode(head.val)
                 current = current.next
-                head = head.next
+            head = head.next
         return dummy.next
     
+"""
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        while head and head.next:
+            if head.val != head.next.val:
+                print(head.val)
+            head = head.next
+        if head:
+            print(head.val)
 
+"""
 
 """
 class Solution:
