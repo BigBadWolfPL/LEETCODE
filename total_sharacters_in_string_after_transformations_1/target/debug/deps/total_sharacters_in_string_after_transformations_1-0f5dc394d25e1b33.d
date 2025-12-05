@@ -1,0 +1,5 @@
+/home/robertb/Dokumenty/KOD/LEETCODE/total_sharacters_in_string_after_transformations_1/target/debug/deps/total_sharacters_in_string_after_transformations_1-0f5dc394d25e1b33.d: src/main.rs
+
+/home/robertb/Dokumenty/KOD/LEETCODE/total_sharacters_in_string_after_transformations_1/target/debug/deps/libtotal_sharacters_in_string_after_transformations_1-0f5dc394d25e1b33.rmeta: src/main.rs
+
+src/main.rs:
